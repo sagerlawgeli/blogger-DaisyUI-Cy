@@ -31,7 +31,7 @@ new class extends Component {
             <x-input label="Password" value="random" type="password" icon="o-key" inline />
 
             <x-slot:actions>
-                <x-button label="Login" type="submit" icon="o-paper-airplane" class="btn-primary" spinner="login" />
+                <x-button label="Login" type="submit" icon="o-paper-airplane" class="btn-primary login-btn" spinner="login" data-test="login-btn" />
             </x-slot:actions>
         </x-form>
     </div>
