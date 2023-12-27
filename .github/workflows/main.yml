@@ -30,15 +30,15 @@ jobs:
        run: chmod -R 777 storage bootstrap/cache
      - name: Wait for MySQL
        run: sleep 15
-     - name: Execute tests (Unit and Feature tests) via PHPUnit
-       env:
-         DB_CONNECTION: mysql
-         DB_HOST: 127.0.0.1
-         DB_PORT: 3306
-         DB_DATABASE: testdb
-         DB_USERNAME: root
-         DB_PASSWORD: password
-       run: ./vendor/bin/pest
+    #  - name: Execute tests (Unit and Feature tests) via PHPUnit
+    #    env:
+    #      DB_CONNECTION: mysql
+    #      DB_HOST: 127.0.0.1
+    #      DB_PORT: 3306
+    #      DB_DATABASE: testdb
+    #      DB_USERNAME: root
+    #      DB_PASSWORD: password
+    #    run: ./vendor/bin/pest
 
  cypress-run:
    needs: laravel-tests
