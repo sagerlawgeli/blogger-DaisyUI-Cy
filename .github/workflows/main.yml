@@ -38,9 +38,10 @@ jobs:
          DB_DATABASE: testdb
          DB_USERNAME: root
          DB_PASSWORD: password
-       run: vendor/bin/phpunit
+       run: ./vendor/bin/pest
 
  cypress-run:
+   needs: laravel-tests
    runs-on: ubuntu-22.04
    steps:
      - name: Checkout
